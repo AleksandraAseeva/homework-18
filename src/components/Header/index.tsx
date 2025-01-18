@@ -4,18 +4,21 @@ import styles from "./styles.module.css";
 import { useIsMobile } from "../../hooks/useMobile";
 import { MobileMenu } from "./MobileMenu";
 import { DesktopMenu } from "./DesktopMenu";
+import { ApiButton } from "./ApiButton";
 
 export const Header = () => {
   const isMobile = useIsMobile();
 
   return (
-    <header>
+    <header >
       <div className={styles.container}>
         <Link to="/BeansProject" className={styles.logo}>
           <img src={logo} alt="logo" />
-          <span>Jelly Belly</span>
+          {/* <span>Jelly Belly</span> */}
         </Link>
         {isMobile ? <MobileMenu /> : <DesktopMenu />}
+        {isMobile ? "" : <ApiButton/>}
+        
       </div>
     </header>
   );

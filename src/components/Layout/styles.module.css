@@ -1,0 +1,9 @@
+.mainCont {
+    padding: 0 5rem;
+}
+
+@media (max-width: 915px) {
+    .mainCont {
+        padding: 0 2rem;
+    }
+}

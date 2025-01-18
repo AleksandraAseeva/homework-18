@@ -23,7 +23,7 @@ export const FactsPage = () => {
   };
   return (
     <div className="facts_container">
-      <h1>Facts ...</h1>
+      <h1 style={{margin: '8rem 0 0 0', fontSize: '2.5rem'}}>Explore All Facts ...</h1>
       {isLoading && data.length === 0 ? (
         <Loader />
       ) : (

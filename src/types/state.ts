@@ -1,3 +1,5 @@
+// типы данных состоящие из типов частей файла index.ts
+
 import { Bean, Combination, Fact, History, Recipe } from ".";
 
 type State = {

@@ -1,0 +1,16 @@
+.ApiB {
+    border-radius: 2rem;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #e87a85;
+    color: #e83a4b;
+    font-size: 0.9rem;
+    background: none;
+}
+
+.ApiB:hover {
+    background: #e87a85;
+}
+
+.TextInB:hover {
+    color: white;
+}

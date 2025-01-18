@@ -7,7 +7,7 @@ type Props = {
 export const FactCard: FC<Props> = ({ data }) => {
   return (
     <div className={styles.wrapper}>
-      <h3>{data.title}</h3>
+      <h3>{data.factId}. {data.title}</h3>
       <p>{data.description}</p>
     </div>
   );

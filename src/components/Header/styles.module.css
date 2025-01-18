@@ -3,6 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* margin: 1rem 0; */
+  padding: 1rem 4rem;
+  background-color: rgb(249, 245, 244);
 }
 
 .container img {
@@ -25,4 +28,10 @@
   font-weight: 600;
   font-family: "Lobster";
   color: var(--base-red);
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding: 1rem 1rem;
+  }
 }

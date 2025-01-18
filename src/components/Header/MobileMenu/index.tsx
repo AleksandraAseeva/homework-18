@@ -31,6 +31,9 @@ export const MobileMenu = () => {
             <Link to="/BeansProject/history" onClick={handleLinkClick}>
               History
             </Link>
+            <Link to="/BeansProject/reviews" onClick={handleLinkClick}>
+              Reviews
+            </Link>
           </nav>
         </div>
       )}

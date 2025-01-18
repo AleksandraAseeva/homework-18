@@ -11,10 +11,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 80px 40px;
+  padding: 5rem 2.5rem;
   background: var(--base-red);
   border-radius: 0 0 10px 10px;
   animation: visible 0.5s linear;
+  z-index: 1;
 }
 
 .wrapper nav {

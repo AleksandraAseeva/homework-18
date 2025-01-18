@@ -10,6 +10,8 @@ import { HistoryPage } from "./pages/History";
 import { NotFound } from "./pages/NotFound";
 import { Loader } from "./components/Loader";
 import { BeanPage } from "./pages/BeanPage";
+import {ApiDocumentation} from "./pages/ApiDocumentation";
+import { Reviews } from "./pages/Review";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +37,14 @@ export const router = createBrowserRouter([
       {
         path: "combinations",
         element: <CombinationsPage />,
+      },
+      {
+        path: "documentation",
+        element: <ApiDocumentation/>,
+      },
+      {
+        path: "reviews",
+        element: <Reviews/>,
       },
       { path: "*", element: <NotFound /> },
     ],
