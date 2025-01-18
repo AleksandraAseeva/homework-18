@@ -135,7 +135,7 @@ const currentUserId = getCurrentUserId();
             }}
           >
             <p style={{ marginRight: "1rem" }}>Рейтинг:</p>
-            {[...Array(5)].map((star, index) => {
+            {[...Array(5)].map((_, index) => {
               const currentRating = index + 1;
               return (
                 <label>
