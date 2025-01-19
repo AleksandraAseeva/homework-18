@@ -19,13 +19,13 @@ export const Footer = () => {
         <div style={{ display: "flex", flexDirection: "column", maxWidth: "30%" }}>
           <div className={styles.list}>
             <p style={{fontSize: "1.2rem"}}>Site Map</p>
-            <Link to="/BeansProject/reviews" className={styles.link}>Reviews</Link>
-            <Link to="/BeansProject/documentation" className={styles.link}>API Documentation</Link>
-            <Link to="/BeansProject/beans" className={styles.link}>Beans</Link>
-            <Link to="/BeansProject/facts" className={styles.link}>Facts</Link>
-            <Link to="/BeansProject/recipes" className={styles.link}>Recipes</Link>
-            <Link to="/BeansProject/combinations" className={styles.link}>Combinations</Link>
-            <Link to="/BeansProject/history" className={styles.link}>History</Link>
+            <Link to="/homevork-18/reviews" className={styles.link}>Reviews</Link>
+            <Link to="/homevork-18/documentation" className={styles.link}>API Documentation</Link>
+            <Link to="/homevork-18/beans" className={styles.link}>Beans</Link>
+            <Link to="/homevork-18/facts" className={styles.link}>Facts</Link>
+            <Link to="/homevork-18/recipes" className={styles.link}>Recipes</Link>
+            <Link to="/homevork-18/combinations" className={styles.link}>Combinations</Link>
+            <Link to="/homevork-18/history" className={styles.link}>History</Link>
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", maxWidth: "20%" }}>

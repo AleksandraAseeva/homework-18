@@ -15,7 +15,7 @@ import { Reviews } from "./pages/Review";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/homevork-18",
     element: <Layout />,
     loader: Loader,
     children: [

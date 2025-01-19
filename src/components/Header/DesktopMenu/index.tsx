@@ -4,12 +4,12 @@ import style from './styles.module.css'
 export const DesktopMenu = () => {
   return (
     <nav className={style.navbar}>
-      <Link to="/BeansProject/beans">Beans</Link>
-      <Link to="/BeansProject/facts">Facts</Link>
-      <Link to="/BeansProject/recipes">Recipes</Link>
-      <Link to="/BeansProject/combinations">Combinations</Link>
-      <Link to="/BeansProject/history">History</Link>
-      <Link to="/BeansProject/reviews">Reviews</Link>
+      <Link to="/homevork-18/beans">Beans</Link>
+      <Link to="/homevork-18/facts">Facts</Link>
+      <Link to="/homevork-18/recipes">Recipes</Link>
+      <Link to="/homevork-18/combinations">Combinations</Link>
+      <Link to="/homevork-18/history">History</Link>
+      <Link to="/homevork-18/reviews">Reviews</Link>
     </nav>
   );
 };

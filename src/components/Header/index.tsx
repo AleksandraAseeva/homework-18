@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <header >
       <div className={styles.container}>
-        <Link to="/BeansProject" className={styles.logo}>
+        <Link to="/homevork-18" className={styles.logo}>
           <img src={logo} alt="logo" />
           {/* <span>Jelly Belly</span> */}
         </Link>

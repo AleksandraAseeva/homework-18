@@ -5,7 +5,7 @@ export const ApiButton = () => {
 
   return (
     <button className={style.ApiB}>
-        <Link to="/BeansProject/documentation" className={style.TextInB}>API Doc</Link>
+        <Link to="/homevork-18/documentation" className={style.TextInB}>API Doc</Link>
     </button>
   );
 };
