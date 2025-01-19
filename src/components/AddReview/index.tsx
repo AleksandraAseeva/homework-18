@@ -4,8 +4,8 @@ import { v4 as uuidv4 } from "uuid";
 import { addReviews } from "../../Redux/review/reviewSlice";
 import { FaStar } from "react-icons/fa";
 import type { RootState } from "../../Redux/store";
-import { ReviewInterface } from "../../Redux/review/reviewSlice"
-import style from "./style.module.css"
+import { ReviewInterface } from "../../Redux/review/reviewSlice";
+import style from "./style.module.css";
 
 export const AddReview = () => {
   const dispatch = useDispatch();
@@ -14,23 +14,25 @@ export const AddReview = () => {
   const [error, setError] = useState("");
   const [rating, setRating] = useState(null);
   const [hover, setHover] = useState(null);
- const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
- const reviews = useSelector((state: RootState) => state.review.reviews);
+  const reviews = useSelector((state: RootState) => state.review.reviews);
 
-// Функция для проверки и генерации идентификатора:
- const getCurrentUserId = () => {
-  let currentUserId = localStorage.getItem("currentUserId"); // Пытаемся получить идентификатор
-  if (!currentUserId) {
-    currentUserId = uuidv4(); // Генерируем новый уникальный идентификатор
-    localStorage.setItem("currentUserId", currentUserId); // Сохраняем его в localStorage
-  }
-  return currentUserId; // Возвращаем идентификатор
-};
+  // Функция для проверки и генерации идентификатора:
+  const getCurrentUserId = () => {
+    let currentUserId = localStorage.getItem("currentUserId"); // Пытаемся получить идентификатор
+    if (!currentUserId) {
+      currentUserId = uuidv4(); // Генерируем новый уникальный идентификатор
+      localStorage.setItem("currentUserId", currentUserId); // Сохраняем его в localStorage
+    }
+    return currentUserId; // Возвращаем идентификатор
+  };
 
-const currentUserId = getCurrentUserId();
+  const currentUserId = getCurrentUserId();
 
- const userReviewExists = reviews.some((review: ReviewInterface) => review.user.userId === currentUserId);
+  const userReviewExists = reviews.some(
+    (review: ReviewInterface) => review.user.userId === currentUserId
+  );
 
   /** эта функция предотвращает обновление страницы по умолчанию при отправке формы и устанавливает значение ошибки, если длина символов меньше 5 или больше 50. 
 В противном случае, если ошибок нет, она отправляет действие в редуктор для добавления новой задачи с уникальным идентификатором. И устанавливает значение ввода пустым */
@@ -58,7 +60,9 @@ const currentUserId = getCurrentUserId();
     }
   };
 
-  const handleUpdateTodoChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleUpdateTodoChange = (
+    e: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     setText(e.target.value);
     if (e.target.value.trim().length > 5 && e.target.value.trim().length < 50) {
       setError("");
@@ -76,20 +80,15 @@ const currentUserId = getCurrentUserId();
       onMouseLeave={() => setIsHovered(false)}
     >
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <div
-          className={style.form_control}
-          style={{ padding: "1rem" }}
-        >
+        <div className={style.form_control} style={{ padding: "1rem" }}>
           <label
-           style={{
-            display: "flex",
-            flexDirection: "column",
-            marginBottom: "1rem",
-          }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginBottom: "1rem",
+            }}
           >
-            <span style={{ marginBottom: "0.5rem"}}>
-              Имя:
-            </span>
+            <span style={{ marginBottom: "0.5rem" }}>Имя:</span>
             <input
               onChange={(e) => setName(e.target.value)}
               value={name}
@@ -111,9 +110,7 @@ const currentUserId = getCurrentUserId();
               marginBottom: "1rem",
             }}
           >
-            <span style={{ marginBottom: "0.5rem"}}>
-              Отзыв:
-            </span>
+            <span style={{ marginBottom: "0.5rem" }}>Отзыв:</span>
             <textarea
               onChange={handleUpdateTodoChange}
               value={text}
@@ -146,15 +143,23 @@ const currentUserId = getCurrentUserId();
                     onClick={() => setRating(currentRating)}
                     style={{ display: "none" }}
                   />
-                  <FaStar
+                  <div
                     style={{ cursor: "pointer" }}
-                    size={30}
-                    color={
-                      currentRating <= (hover || rating) ? "#ffc107" : "#e4e5e9"
-                    }
                     onMouseEnter={() => setHover(currentRating)}
                     onMouseLeave={() => setHover(null)}
-                  />
+                  >
+                    <FaStar
+                      // style={{ cursor: "pointer" }}
+                      size={30}
+                      color={
+                        currentRating <= (hover || rating)
+                          ? "#ffc107"
+                          : "#e4e5e9"
+                      }
+                      // onMouseEnter={() => setHover(currentRating)}
+                      // onMouseLeave={() => setHover(null)}
+                    />
+                  </div>
                 </label>
               );
             })}
@@ -183,7 +188,7 @@ const currentUserId = getCurrentUserId();
             position: "absolute",
             fontSize: "1.3rem",
             bottom: "-2rem",
-            left: "1rem"
+            left: "1rem",
           }}
         >
           {error}
