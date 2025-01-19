@@ -6,6 +6,7 @@ import "./App.css";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistor } from "./Redux/store";
 // import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       <PersistGate persistor={persistor}>
         текст
         {/* <HashRouter basename="/homework-18"> */}
+        <BrowserRouter basename="/homework-18/">
           <RouterProvider router={router} />
+          </BrowserRouter>
         {/* </HashRouter> */}
       </PersistGate>
     </Provider>
