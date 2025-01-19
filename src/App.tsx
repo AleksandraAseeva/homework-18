@@ -10,6 +10,7 @@ function App() {
   return (
     <Provider store={store}>
        <PersistGate persistor={persistor}>
+        текст
        <RouterProvider router={router} />
       </PersistGate>
     </Provider>
